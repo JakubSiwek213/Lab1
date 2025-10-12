@@ -30,8 +30,8 @@ jobs:
           test-name: Restore
           setup-command: ''
           command: |
-            dotnet restore ./Lab1_Task.ConsoleApp/Lab1_Task.ConsoleApp.csproj
-            dotnet restore ./Lab1_Task.Tests/Lab1_Task.Tests.csproj
+            dotnet restore ./src/Lab1_Task/Lab1_Task.ConsoleApp/Lab1_Task.ConsoleApp.csproj
+            dotnet restore ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj
           timeout: 60
           max-score: 0
 
@@ -43,8 +43,8 @@ jobs:
           test-name: Build
           setup-command: ''
           command: |
-            dotnet build ./Lab1_Task.ConsoleApp/Lab1_Task.ConsoleApp.csproj -c Release --no-restore
-            dotnet build ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-restore
+            dotnet build ./src/Lab1_Task/Lab1_Task.ConsoleApp/Lab1_Task.ConsoleApp.csproj -c Release --no-restore
+            dotnet build ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-restore
           timeout: 60
           max-score: 0
 
@@ -56,7 +56,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: S01_ClassExists_Public
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S01_ClassExists_Public" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S01_ClassExists_Public" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -65,7 +65,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: S02_Prop_AccountNumber_Exists
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S02_Prop_AccountNumber_Exists" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S02_Prop_AccountNumber_Exists" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -74,7 +74,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: S03_Prop_OwnerName_Exists
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S03_Prop_OwnerName_Exists" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S03_Prop_OwnerName_Exists" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -83,7 +83,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: S04_Prop_Balance_Exists
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S04_Prop_Balance_Exists" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S04_Prop_Balance_Exists" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -92,7 +92,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: S05_Prop_Currency_Exists
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S05_Prop_Currency_Exists" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S05_Prop_Currency_Exists" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -101,7 +101,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: S06_Prop_IsActive_Exists
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S06_Prop_IsActive_Exists" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S06_Prop_IsActive_Exists" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -110,7 +110,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: S07_Props_Count_AtLeast6
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S07_Props_Count_AtLeast6" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S07_Props_Count_AtLeast6" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -119,7 +119,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: S08_Fields_Count_AtLeast5
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S08_Fields_Count_AtLeast5" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S08_Fields_Count_AtLeast5" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -128,7 +128,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: S09_Method_Deposit_Exists
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S09_Method_Deposit_Exists" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S09_Method_Deposit_Exists" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -137,7 +137,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: S10_Method_Withdraw_Exists
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S10_Method_Withdraw_Exists" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S10_Method_Withdraw_Exists" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -146,7 +146,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: S11_Method_TransferTo_Exists_WithSignature
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S11_Method_TransferTo_Exists_WithSignature" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.S11_Method_TransferTo_Exists_WithSignature" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -156,7 +156,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: B01_Deposit_Increases_Balance
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.B01_Deposit_Increases_Balance" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.B01_Deposit_Increases_Balance" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -165,7 +165,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: B02_Withdraw_Decreases_Balance
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.B02_Withdraw_Decreases_Balance" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.B02_Withdraw_Decreases_Balance" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -174,7 +174,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: B03_TransferTo_Moves_Funds
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.B03_TransferTo_Moves_Funds" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.B03_TransferTo_Moves_Funds" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
@@ -183,7 +183,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: B04_Withdraw_TooMuch_ShouldNotChangeBalance
-          command: dotnet test ./Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.B04_Withdraw_TooMuch_ShouldNotChangeBalance" -l "console;verbosity=detailed"
+          command: dotnet test ./src/Lab1_Task/Lab1_Task.Tests/Lab1_Task.Tests.csproj -c Release --no-build --filter "FullyQualifiedName=Lab1_Task.Tests.BankAccountTests.B04_Withdraw_TooMuch_ShouldNotChangeBalance" -l "console;verbosity=detailed"
           timeout: 30
           max-score: 1
 
