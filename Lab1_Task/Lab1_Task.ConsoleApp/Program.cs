@@ -18,7 +18,7 @@ namespace Lab1_Task.ConsoleApp
 
         public string AccountNumber
         {
-            get => _accountNumber; 
+            get => _accountNumber;
             set => _accountNumber = string.IsNullOrWhiteSpace(value)
                 ? throw new ArgumentException("Numer konta nie może być pusty")
                 : value;

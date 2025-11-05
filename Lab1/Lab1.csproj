@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\jakub\source\repos\jipp-z303-laboratory-1-task-JakubSiwek213\src\Lab1_Task\Lab1_Task.ConsoleApp\Lab1_Task.ConsoleApp.csproj" />
+    <ProjectReference Include="C:\Users\jakub\source\repos\jipp-z303-laboratory-1-task-JakubSiwek213\src\Lab1_Task\Lab1_Task.Tests\Lab1_Task.Tests.csproj" />
+  </ItemGroup>
+
 </Project>
