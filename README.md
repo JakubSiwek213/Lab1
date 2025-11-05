@@ -1,1 +1,1 @@
-Poprawny kod z testami jest w Lab1_Task.ConsoleApp
+Dosyłam kod z przeprowadzonymi testami, jest w  Lab1_Task.ConsoleApp
